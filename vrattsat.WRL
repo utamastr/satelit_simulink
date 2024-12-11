@@ -1,0 +1,186 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+NavigationInfo {
+	type	"EXAMINE"
+}
+DEF topview Viewpoint {
+	fieldOfView	0.785398
+	jump	TRUE
+	position	0 0 50
+	description	"topview"
+}
+DEF satelit Transform {
+	translation	6.8 0 0
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    diffuseColor	1 1 1
+			    }
+
+		    }
+
+		    geometry	DEF satelit Box {
+			    size	1 1 1
+		    }
+
+	    }
+
+	    DEF solarpanel Transform {
+		    translation	0 0 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.00354648 0.0864516 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	1 4 0.2
+			    }
+
+		    }
+	    }
+
+	    DEF zb Transform {
+		    translation	0 0 2
+		    rotation	1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0.969175 1 0.00480121
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	4
+				    radius	0.1
+			    }
+
+		    }
+	    }
+
+	    DEF xb Transform {
+		    translation	2 0 0
+		    rotation	0 0 1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0.0304511 1 0.0359978
+				    }
+
+			    }
+
+			    geometry	DEF xb Cylinder {
+				    height	4
+				    radius	0.1
+			    }
+
+		    }
+	    }
+
+	    DEF yb Transform {
+		    translation	0 2 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	1 0.0408162 0.0408162
+				    }
+
+			    }
+
+			    geometry	DEF yb Cylinder {
+				    height	4
+				    radius	0.1
+			    }
+
+		    }
+	    }
+	]
+}
+DEF earth Transform {
+	translation	0 0 0
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	1
+				    diffuseColor	0.0060575 0.682286 1
+				    emissiveColor	0.04 0.04 0.04
+			    }
+
+		    }
+
+		    geometry	Sphere {
+			    radius	6.371
+		    }
+
+	    }
+
+	    DEF ze Transform {
+		    translation	0 0 7.5
+		    rotation	1 0 0  1.5708
+		    center	-0.2397 -1.12756e-006 -0.179778
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	1 0.917095 0.00354648
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	15
+				    radius	0.1
+			    }
+
+		    }
+	    }
+
+	    DEF xe Transform {
+		    translation	7.5 0 0
+		    rotation	0 0 1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.255647 1 0.0244557
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	15
+				    radius	0.1
+			    }
+
+		    }
+	    }
+
+	    DEF ye Transform {
+		    translation	0 7.5 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	1 0.095056 0.0170127
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	15
+				    radius	0.1
+			    }
+
+		    }
+	    }
+	]
+}
